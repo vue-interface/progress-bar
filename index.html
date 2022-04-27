@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>ProgressBar</title>
+    </head>
+    <body>
+        <div id="app" class="container mx-auto">
+            <h1 class="text-4xl mb-6">progress-bar</h1>
+
+            <h3 class="text-2xl mb-3">Basic Usage</h3>
+
+            <progress-bar :value="progress"></progress-bar>
+
+            <hr>
+
+            <h3>Colors</h3>
+
+            <progress-bar :value="50" variant="primary" class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="secondary" class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="success" class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="danger" class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="warning" class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="info" class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="dark" class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="light" class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="muted" class="mb-3"></progress-bar>
+
+            <hr>
+
+            <h3>Striped</h3>
+
+            <progress-bar :value="50" variant="primary" striped class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="secondary" striped class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="success" striped class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="danger" striped class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="warning" striped class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="info" striped class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="dark" striped class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="light" striped class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="muted" striped class="mb-3"></progress-bar>
+
+            <hr>
+
+            <h3>Animated</h3>
+
+            <progress-bar :value="50" variant="primary" striped animated class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="secondary" striped animated class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="success" striped animated class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="danger" striped animated class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="warning" striped animated class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="info" striped animated class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="dark" striped animated class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="light" striped animated class="mb-3"></progress-bar>
+            <progress-bar :value="50" variant="muted" striped animated class="mb-3"></progress-bar>
+
+            <hr>
+
+            <h3>Height</h3>
+
+            <progress-bar height="100px" :value="50" striped animated></progress-bar>
+        </div>
+
+        <script type="module">
+            import './index.css';
+            import Vue from 'vue/dist/vue';
+            import { ProgressBar } from './index.js';
+
+            const vue = new Vue({
+                el: '#app',
+                components: {
+                    ProgressBar
+                },
+                data() {
+                    return {
+                        progress: 0
+                    };
+                },
+                mounted() {
+                    const progress = () => {
+                        setTimeout(() => {
+                            this.progress++;
+
+                            if(this.progress < 100) {
+                                progress();
+                            }
+                        }, 500);
+                    };
+
+                    progress();
+                }
+            });
+        </script>
+    </body>
+</html>
