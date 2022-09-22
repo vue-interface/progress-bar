@@ -64,11 +64,10 @@
 
         <script type="module">
             import './index.css';
-            import Vue from 'vue/dist/vue';
+            import { createApp } from 'vue/dist/vue.esm-bundler';
             import { ProgressBar } from './index.js';
 
-            const vue = new Vue({
-                el: '#app',
+            createApp({
                 components: {
                     ProgressBar
                 },
@@ -85,12 +84,13 @@
                             if(this.progress < 100) {
                                 progress();
                             }
+
                         }, 500);
                     };
 
                     progress();
                 }
-            });
+            }).mount('#app');
         </script>
     </body>
 </html>
