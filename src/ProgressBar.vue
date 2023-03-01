@@ -1,27 +1,4 @@
-<template>
-    <div class="progress" :style="{'height': height}">
-        <div
-            class="progress-bar"
-            role="progressbar"
-            :style="styles"
-            :class="classes"
-            :aria-valuenow="offsetValue"
-            :aria-valuemin="min"
-            :aria-valuemax="max">
-            <span v-if="!!label">
-                <template v-if="label !== true">
-                    {{ label }}
-                </template>
-                {{ offsetValue }}%
-            </span>
-            <span v-else>
-                <slot />
-            </span>
-        </div>
-    </div>
-</template>
-
-<script>
+<script lang="ts">
 import { Variant } from '@vue-interface/variant';
 
 export default {
@@ -147,6 +124,31 @@ export default {
 
 };
 </script>
+
+<template>
+    <div
+        class="progress"
+        :style="{'height': height}">
+        <div
+            class="progress-bar"
+            role="progressbar"
+            :style="styles"
+            :class="classes"
+            :aria-valuenow="offsetValue"
+            :aria-valuemin="min"
+            :aria-valuemax="max">
+            <span v-if="!!label">
+                <template v-if="label !== true">
+                    {{ label }}
+                </template>
+                {{ offsetValue }}%
+            </span>
+            <span v-else>
+                <slot />
+            </span>
+        </div>
+    </div>
+</template>
 
 <style>
 .progress {
