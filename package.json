@@ -2,14 +2,23 @@
   "name": "@vue-interface/progress-bar",
   "version": "2.0.0-beta.3",
   "description": "A Vue progress bar component.",
-  "main": "./dist/progress-bar.umd.js",
-  "module": "./index.js",
   "files": [
-    "index.js",
     "dist",
-    "src",
     "tailwindcss"
   ],
+  "type": "module",
+  "main": "./dist/progress-bar.umd.cjs",
+  "module": "./dist/progress-bar.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/progress-barjs",
+      "require": "./dist/progress-bar.umd.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./tailwindcss": "./tailwindcss/index.cjs",
+    "./tailwindcss/safelist": "./tailwindcss/safelist.cjs"
+  },
   "browserslist": "last 2 versions, > 0.5%, ie >= 11",
   "scripts": {
     "dev": "vite",
