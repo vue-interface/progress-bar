@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
-    "@vue-interface/eslint-config": "1.0.0-beta.4",
+    "@vue-interface/eslint-config": "^1.0.0-beta.0",
     "autoprefixer": "^10.4.8",
     "change-case": "^4.1.2",
     "eslint": "^8.22.0",
