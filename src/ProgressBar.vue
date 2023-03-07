@@ -1,7 +1,8 @@
 <script lang="ts">
 import { Variant } from '@vue-interface/variant';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
 
     name: 'ProgressBar',
 
@@ -122,7 +123,7 @@ export default {
 
     }
 
-};
+});
 </script>
 
 <template>
