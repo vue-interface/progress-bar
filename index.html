@@ -17,55 +17,29 @@
 
             <h3>Colors</h3>
 
-            <progress-bar :value="50" variant="primary" class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="secondary" class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="success" class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="danger" class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="warning" class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="info" class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="dark" class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="light" class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="muted" class="mb-3"></progress-bar>
-
-            <hr>
-
-            <h3>Striped</h3>
-
-            <progress-bar :value="50" variant="primary" striped class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="secondary" striped class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="success" striped class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="danger" striped class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="warning" striped class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="info" striped class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="dark" striped class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="light" striped class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="muted" striped class="mb-3"></progress-bar>
-
-            <hr>
-
-            <h3>Animated</h3>
-
-            <progress-bar :value="50" variant="primary" striped animated class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="secondary" striped animated class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="success" striped animated class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="danger" striped animated class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="warning" striped animated class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="info" striped animated class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="dark" striped animated class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="light" striped animated class="mb-3"></progress-bar>
-            <progress-bar :value="50" variant="muted" striped animated class="mb-3"></progress-bar>
-
+            <div class="flex flex-col gap-4">
+                <progress-bar :value="50" class="bg-primary"></progress-bar>
+                <progress-bar :value="50" class="bg-secondary"></progress-bar>
+                <progress-bar :value="50" class="bg-success"></progress-bar>
+                <progress-bar :value="50" class="bg-danger"></progress-bar>
+                <progress-bar :value="50" class="bg-warning"></progress-bar>
+                <progress-bar :value="50" class="bg-info"></progress-bar>
+                <progress-bar :value="50" class="bg-dark"></progress-bar>
+                <progress-bar :value="50" class="bg-light"></progress-bar>
+                <progress-bar :value="50" class="bg-muted"></progress-bar>
+            </div>
+            
             <hr>
 
             <h3>Height</h3>
 
-            <progress-bar height="100px" :value="50" striped animated></progress-bar>
+            <progress-bar class="h-[1.5rem]" label="Some Label" :value="50" striped animated></progress-bar>
         </div>
 
         <script type="module">
             import './index.css';
             import { createApp } from 'vue/dist/vue.esm-bundler';
-            import { ProgressBar } from './index.js';
+            import { ProgressBar } from './index';
 
             createApp({
                 components: {
