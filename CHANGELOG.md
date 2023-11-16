@@ -1,3 +1,10 @@
+# [2.0.0-beta.9](https://github.com/vue-interface/progress-bar/compare/v2.0.0-beta.8...v2.0.0-beta.9) (2023-11-16)
+
+
+### Bug Fixes
+
+* package.json ([2bbb67d](https://github.com/vue-interface/progress-bar/commit/2bbb67dd4c915cab52c41ce015b2a7c07cc4501f))
+
 # [2.0.0-beta.8](https://github.com/vue-interface/progress-bar/compare/v2.0.0-beta.7...v2.0.0-beta.8) (2023-11-16)
 
 
