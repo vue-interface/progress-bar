@@ -3,9 +3,9 @@
   "version": "2.0.0-beta.7",
   "description": "A Vue progress bar component.",
   "files": [
-    "index.js",
-    "src",
-    "dist"
+    "index.ts",
+    "dist",
+    "src"
   ],
   "type": "module",
   "main": "./dist/progress-bar.umd.js",
